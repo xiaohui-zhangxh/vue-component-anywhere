@@ -2,7 +2,10 @@
   "name": "vue-component-anywhere",
   "version": "1.0.0",
   "description": "Mount Vue Component from anywhere, suppurt event messaging",
-  "main": "index.js",
+  "main": "lib/mixin.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
