@@ -1,0 +1,22 @@
+{
+  "name": "vue-component-anywhere",
+  "version": "1.0.0",
+  "description": "Mount Vue Component from anywhere, suppurt event messaging",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaohui-zhangxh/vue-component-anywhere.git"
+  },
+  "keywords": [
+    "Vue"
+  ],
+  "author": "xiaohui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiaohui-zhangxh/vue-component-anywhere/issues"
+  },
+  "homepage": "https://github.com/xiaohui-zhangxh/vue-component-anywhere#readme"
+}
