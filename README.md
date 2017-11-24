@@ -63,3 +63,19 @@ From HTML side(mypage.html):
   }
 </script>
 ```
+
+VCA will automatically search DOMs which rel="vue", then mount Vue component which name is defined from role`(catalog)` when page is loaded.
+
+## References
+
+- Required HTML DOM tags
+  - `rel="vca"` => declare this is an Vue Component Anywhere element
+  - `role`      => the name of component which added by `addComponent('catalog', Catalog)`
+- Added Computed attributes:
+  - `$htmlAttributes` => all attributes from HTML DOM
+  - `$htmlClass`      => class name of HTML DOM
+  - `$htmlName`       => attribute name of HTML DOM
+- Added Methods:
+  - `$fireHTMLEvent`  => fire event to HTML
+
+

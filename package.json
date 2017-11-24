@@ -2,7 +2,7 @@
   "name": "vue-component-anywhere",
   "version": "1.0.0",
   "description": "Mount Vue Component from anywhere, suppurt event messaging",
-  "main": "lib/mixin.js",
+  "main": "lib/main.js",
   "files": [
     "lib"
   ],
