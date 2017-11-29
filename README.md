@@ -19,22 +19,23 @@ From Vue side(components.js):
 
 ```js
 import Vue from 'vue'
-import VCA, { addComponent } from 'vue-component-anywhere'
+import VCA from 'vue-component-anywhere'
 Vue.use(VCA)
 # or passing onLoadEventName if you are using Rails turbolinks
 Vue.use(VCA, {onLoadEventName: 'turbolinks:load'})
 
-import Catalog from './catalog'
-addComponent('catalog', Catalog);
+import Hello from './hello'
+VCA.add('hello', Hello);
+
 ```
 
-From Vue component(catalog.vue):
+From Vue component(hello.vue):
 
 ```js
 <template>
   <div :class="$htmlClass">
-    <h3>Catalogs Example</h3>
-    <b>URL: {{$htmlAttributes['url']}}</b>
+    <h3>Hello Example</h3>
+    <b>User Name: {{$htmlAttributes['username']}}</b>
   </div>
 </template>
 ...
@@ -52,25 +53,24 @@ From HTML side(mypage.html):
   rel="vue" role="catalog"
   @change="showChange"
   class="mystyle"
-  name="catalog_id"
-  url="http://localhost:3000/catalogs"
-/>
+  username="xiaohui"
+></div>
 <script src="/packs/components-92219426ec74afb4a5c3.js"></script>
 <link rel="stylesheet" media="screen" href="/packs/components-4461095acd9ae576e8d9249c6800a509.css" />
 <script language="javascript">
   function showChange(v) {
-    console.log(`catalog changes to ${v}`);
+    console.log(`name changes to ${v}`);
   }
 </script>
 ```
 
-VCA will automatically search DOMs which rel="vue", then mount Vue component which name is defined from role`(catalog)` when page is loaded.
+VCA will automatically search DOMs which rel="vue", then mount Vue component which name is defined from role `hello` when page is loaded.
 
 ## References
 
 - Required HTML DOM tags
   - `rel="vca"` => declare this is an Vue Component Anywhere element
-  - `role`      => the name of component which added by `addComponent('catalog', Catalog)`
+  - `role`      => the name of component which added by `VCA.add('hello', Hello)`
 - Added Computed attributes:
   - `$htmlAttributes` => all attributes from HTML DOM
   - `$htmlClass`      => class name of HTML DOM
