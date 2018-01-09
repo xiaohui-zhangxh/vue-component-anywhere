@@ -50,7 +50,7 @@ From HTML side(mypage.html):
 
 ```html
 <div
-  rel="vue" role="catalog"
+  rel="vca" role="catalog"
   @change="showChange"
   class="mystyle"
   username="xiaohui"
@@ -64,7 +64,7 @@ From HTML side(mypage.html):
 </script>
 ```
 
-VCA will automatically search DOMs which rel="vue", then mount Vue component which name is defined from role `hello` when page is loaded.
+VCA will automatically search DOMs which rel="vca", then mount Vue component which name is defined from role `hello` when page is loaded.
 
 ## References
 
